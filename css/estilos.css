@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto
+}
+
+header {
+    padding: 10px 0;
+    background: rgb(243, 245, 243);
+}
+
+.flex_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex
+    }
+
+header h1 {
+    font-size: 180%;
+    color: rgb(2, 1, 34);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 140%;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 120%;
+    font-weight: 600;
+}
+
+nav {
+    padding: 1em;
+}
+
+body {
+    font-weight: 300;
+    font-size: 98%;
+}
+
+header ul li a {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 90%;
+    color: rgb(2, 1, 34);
+    padding: 1.80em;
+}
+
+header ul li a:hover {
+    color: white;
+    background-color: rgb(214, 40, 40);
+    text-decoration: underline;
+}
+
+.icon {
+    display: none;
+    width: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    header nav {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 75%;
+        height: 100vh;
+        background: rgb(243, 245, 243);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+        transition: left 0.5s;
+        z-index: 1
+    }
+    #menu:target{
+        left: 0;
+    }
+    .icon{
+        display: block;
+    }
+    .close {
+        position: absolute;
+        left: 1.4rem;
+        top: 0.9rem;
+    }
+    header ul {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header ul li {
+        margin: 1.5rem 0;
+    }
+    header ul li a {
+        font-size: 2rem;
+    }
+    header ul li a:hover {
+        color: black;
+        background-color:  rgb(243, 245, 243);
+        text-decoration: underline black;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(243, 245, 243); 
+    padding: 1em;
+}
+
+.iconify {
+    font-size: 2em;
+    color: black;
+}
+
+a .iconify:hover {
+    color: rgb(214, 40, 40)
+}
+
+.form p {
+    margin-bottom: 0.5em;
+}
+
+.form {
+    padding: 1em;
+}
+
+.redes_sociales {
+    text-align: center;
+    padding-bottom: 8px;
+    margin-top: 3rem;
+}
+
+.redes_sociales a {
+    margin: 0.3em
+}
+
+.section_all {
+    padding: 4rem 0;
+}
+
+.section_all h2 {
+    margin-bottom: 2rem;
+}
+
+.section_articles .contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+.section_articles .contenedor .latest_news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.section_articles article {
+    text-align: center;
+}
+
+.latest_news article img {
+    border-radius: 2.50%;
+    transition: transform 0.3s;
+}
+
+.section_articles img {
+    border-radius: 2.50%;
+}
+
+.latest_news article img:hover {
+    transform: scale(1.03);
+}
+
+.section_videos ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px ;
+    grid-row-gap: 10px;
+    grid-template-areas: 
+    "video1 video1 video2"
+    "video3 video4 video5"
+    "video6 video6 video6"
+}
+
+.section_videos ul li.item1 {
+    grid-area: video1;
+}
+
+.section_videos ul li.item2 {
+    grid-area: video2;
+}
+
+.section_videos ul li.item3 {
+    grid-area: video3;
+}
+
+.section_videos ul li.item4 {
+    grid-area: video4;
+}
+
+.section_videos ul li.item5 {
+    grid-area: video5;
+}
+
+.section_videos ul li.item6 {
+    grid-area: video6;
+}
+
+.section_videos ul li.item7 {
+    grid-area: video7;
+}
+
+.section_videos ul li.item8 {
+    grid-area: video8;
+}
+
+.section_videos ul img {
+    transition: transform 0.3s;
+}
+
+.section_videos ul img:hover {
+    transform: scale(1.03);
+}
+
+.latest_news p{
+    margin-bottom: 1.5em;
+}
+
+.btn-primary {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-color: black;
+    padding: 0.7em 1em;
+    border-radius: .3em;
+}
+
+.btn-primary:hover {
+    background: rgb(214, 40, 40);
+    color: white;
+    border-color: rgb(214, 40, 40);
+}
+
+
+.section_about p {
+    margin: 1rem 0;
+}
